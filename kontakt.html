@@ -1,38 +1,70 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Satelight</title>
-    <link rel="stylesheet" href="satelight.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-<div class="headerlogo">
-    <a href="satelight.html"><img src="satelight_web.webp" alt="logo"></a>
+<div class="flex justify-center p-3">
+    <img src="icons/satelight_web.png" alt="logo">
 </div>
-<div class="topnav">
-    <a href="wir.html">Über uns</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="#">Leistung</a>
-    <a href="#">Galerie</a>
+<div class="flex text-white justify-center space-x-32 bg-[#092948] p-3 sticky top-0 text-2xl">
+    <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="satelight.html">Startseite</a>
+    <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="ueber_uns.html">Über uns</a>
+    <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="kontakt.html">Kontakt</a>
+    <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="leistungen.html">Leistung</a>
+    <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="veranstaltungen.html">Veranstaltungen</a>
 </div>
-<div class="kontakt_content">
-    <h1>Kontakt</h1>
-    <img src="icons/insta.png"><img src="icons/facebook.png">
-    <p>Mailformular mit ionos phpmailer</p>
-    <h2>Der Weg zu uns</h2>
-    <img src="icons/standort.png"><br>
-    D-55294 Bodenheim<br>Gaustraße 77<br>
-    <a href="https://goo.gl/maps/h5TqdCpCVaJUdQ6P9"><img src="icons/google-maps.png"></a><br>
-    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=8.29771935939789%2C49.9232998190559%2C8.300616145133974%2C49.92489021221327&amp;layer=mapnik&amp;marker=49.924095022193235%2C8.29916775226593" style="border: 1px solid black"></iframe>
+<div class="text-4xl font-bold mt-4 text-center">Kontakt</div>
+<div class="max-w-3/4 mx-auto flex flex-col lg:flex-row items-center justify-center">
+    <div class="w-3/4 px-4 py-8">
+        <div class="flex justify-center mb-4">
+            <img src="icons/insta.png" alt="Instagram" class="h-32 w-32 mr-5">
+            <img src="icons/facebook.png" alt="Facebook" class="h-32 w-32 ml-5">
+        </div>
+        <form action="sendmail.php" method="POST" class="mb-4">
+            <label class="block mb-2 font-bold text-lg" for="email">Deine E-Mail-Adresse</label>
+            <input type="email" name="email" id="email" required class="border border-gray-400 p-2 w-full">
+            <label class="block mb-2 font-bold text-lg" for="subject">Betreff</label>
+            <input type="text" name="subject" id="subject" required class="border border-gray-400 p-2 w-full">
+            <label class="block mb-2 font-bold text-lg" for="message">Nachricht</label>
+            <textarea name="message" id="message" rows="5" required class="border border-gray-400 p-2 w-full"></textarea>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Abschicken</button>
+        </form>
+        </div>
 </div>
-<div>
+
+<div class="flex justify-center">
+    <div class="w-full px-4 py-8">
+        <div class="text-3xl font-bold mb-4 flex justify-center">Der Weg zu uns</div>
+        <div class="flex items-center mb-4 justify-center">
+            <img src="icons/standort.png" alt="Standort" class="h-6 w-6 mr-2">
+            <p class="leading-6">D-55294 Bodenheim<br>Gaustraße 77</p>
+        </div>
+        <div class="mb-4 flex justify-center">
+            <a href="https://goo.gl/maps/h5TqdCpCVaJUdQ6P9">
+                <img src="icons/google-maps.png" alt="Google Maps">
+            </a>
+        </div>
+        <div class="mx-auto" style="height: 600px;">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=8.29771935939789%2C49.9232998190559%2C8.300616145133974%2C49.92489021221327&amp;layer=mapnik&amp;marker=49.924095022193235%2C8.29916775226593" frameborder="0" style="border: 1px solid black; height: 100%; width: 100%;"></iframe>
+        </div>
+    </div>
 </div>
-<div class="footer">
-    <p>Philip Holdenried</p>
-    <p>Gaustraße 77</p>
-    <p>55294 Bodenheim</p>
-    <p>Copyright Satelight 2023</p>
-</div>
+<footer class="bg-[#092948] text-gray-300">
+    <div class="container mx-auto py-4">
+        <div class="flex justify-center items-center flex-col">
+            <p class="mb-2">Satelight Veranstaltungstechnik</p>
+            <p class="mb-2">Phillip Holdenried</p>
+            <p class="mb-2">Gaustraße 77</p>
+            <p class="mb-2">55294 Bodenheim</p>
+        </div>
+        <div class="text-center mt-4">
+            <p>&copy; 2023 Satelight</p>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
