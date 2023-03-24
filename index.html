@@ -4,60 +4,86 @@
     <meta charset="UTF-8">
     <title>Satelight</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <div class="flex justify-center p-3">
         <img src="icons/satelight_web.png" alt="logo">
     </div>
-    <div class="flex text-white justify-center space-x-32 bg-[#092948] p-3 sticky top-0 text-2xl">
+    <!-- Desktop-Navigation -->
+    <div class="hidden sm:flex text-white justify-center space-x-32 bg-[#092948] p-3 sticky top-0 text-2xl w-full">
         <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="index.html">Startseite</a>
         <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="ueber_uns.html">Über uns</a>
         <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="kontakt.html">Kontakt</a>
         <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="leistungen.html">Leistung</a>
         <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="veranstaltungen.html">Veranstaltungen</a>
     </div>
+
+    <!-- Mobile-Navigation (standardmäßig ausgeblendet) -->
+    <div class="sm:hidden flex text-white justify-between items-center bg-[#092948] p-3 sticky top-0 text-2xl w-full">
+        <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links hidden">
+            <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="index.html">Startseite</a>
+            <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="ueber_uns.html">Über uns</a>
+            <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="kontakt.html">Kontakt</a>
+            <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="leistungen.html">Leistung</a>
+            <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="veranstaltungen.html">Veranstaltungen</a>
+        </div>
+    </div>
+
+    <!-- Skript zum Anzeigen und Ausblenden der mobilen Navigation -->
+    <script>
+        const hamburgerIcon = document.querySelector('.hamburger-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburgerIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+        });
+    </script>
+
     <div class="max-w-screen">
         <img src="bild1.jpg" class="w-full">
     </div>
-    <div class="flex items-center justify-center">
-        <div class="flex flex-col items-center">
-            <div class="flex justify-between w-full">
-                <div class="w-1/3 p-10">
-                    <div class="rounded-3xl shadow-2xl flex flex-col items-center p-5">
-                        <img src="icons/sound.png" alt="Bild 1" class="w-1/2 mb-5">
-                        <p class="text-center text-6xl">Sound</p>
-                    </div>
-                </div>
-                <div class="w-1/3 p-10">
-                    <div class="rounded-3xl shadow-2xl flex flex-col items-center p-5">
-                        <img src="icons/spotlight.png" alt="Bild 1" class="w-1/2 mb-5">
-                        <p class="text-center text-6xl">Licht</p>
-                    </div>
-                </div>
-                <div class="w-1/3 p-10">
-                    <div class="rounded-3xl shadow-2xl flex flex-col items-center p-5">
-                        <img src="icons/play-button.png" alt="Bild 1" class="w-1/2 mb-5">
-                        <p class="text-center text-6xl">Video</p>
-                    </div>
-                </div>
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-3">
+        <div class="p-10">
+            <div class="rounded-3xl shadow-2xl flex flex-col items-center p-5">
+                <img src="icons/sound.png" alt="Ton" class="w-1/2 mb-5">
+                <p class="text-center text-6xl" style="font-family: 'URW Gothic'">Ton</p>
             </div>
-            <div class="flex justify-center w-full">
-                <div class="w-1/3 p-10">
-                    <div class="rounded-3xl shadow-2xl flex flex-col items-center p-5">
-                        <img src="icons/stage.png" alt="Bild 1" class="w-1/2 mb-5">
-                        <p class="text-center text-6xl">Bühne</p>
-                    </div>
-                </div>
-                <div class="w-1/3 p-10">
-                    <div class="rounded-3xl shadow-2xl flex flex-col items-center p-5">
-                        <img src="icons/message.png" alt="Bild 1" class="w-1/2 mb-5">
-                        <p class="text-center text-6xl">Support</p>
-                    </div>
-                </div>
+        </div>
+        <div class="p-10">
+            <div class="rounded-3xl shadow-2xl flex flex-col items-center p-5">
+                <img src="icons/spotlight.png" alt="Licht" class="w-1/2 mb-5">
+                <p class="text-center text-6xl" style="font-family: 'URW Gothic'">Licht</p>
+            </div>
+        </div>
+        <div class="p-10">
+            <div class="rounded-3xl shadow-2xl flex flex-col items-center p-5">
+                <img src="icons/play-button.png" alt="Video" class="w-1/2 mb-5">
+                <p class="text-center text-6xl" style="font-family: 'URW Gothic'">Video</p>
             </div>
         </div>
     </div>
+    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <div class="p-10 sm:col-span-1">
+                <div class="rounded-3xl shadow-2xl flex flex-col items-center p-5 justify-center">
+                    <img src="icons/stage.png" alt="Bühne" class="w-1/2 mb-5">
+                    <p class="text-center text-4xl sm:text-6xl" style="font-family: 'URW Gothic'">Bühne/Rigging</p>
+                </div>
+            </div>
+            <div class="p-10 sm:col-span-1">
+                <div class="rounded-3xl shadow-2xl flex flex-col items-center p-5 justify-center">
+                    <img src="icons/message.png" alt="Support" class="w-1/2 mb-5">
+                    <p class="text-center text-6xl" style="font-family: 'URW Gothic'">Support</p>
+                </div>
+            </div>
+    </div>
+
     <footer class="bg-[#092948] text-gray-300">
         <div class="container mx-auto py-4">
             <div class="flex justify-center items-center flex-col">

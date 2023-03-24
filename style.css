@@ -1,0 +1,38 @@
+.hamburger-icon {
+    display: block;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    display: block;
+    height: 2px;
+    width: 25px;
+    margin: 5px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links {
+    flex-direction: column;
+}
+
+.nav-links a {
+    display: block;
+}
+
+@media (min-width: 640px) {
+    .hamburger-icon {
+        display: none;
+    }
+    .nav-links {
+        flex-direction: row;
+    }
+    .nav-links a {
+        display: inline-block;
+    }
+}
+
+@font-face {
+    font-family: 'Magistral Book';
+    src: url('FontsFree-Net-Magistral2.ttf');
+}
