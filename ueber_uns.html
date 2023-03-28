@@ -4,26 +4,67 @@
     <meta charset="UTF-8">
     <title>Satelight</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 <div class="flex justify-center p-3">
     <img src="icons/satelight_web.png" alt="logo">
 </div>
-<div class="flex text-white justify-center space-x-32 bg-[#092948] p-3 sticky top-0 text-2xl">
+<div class="hidden sm:flex text-white justify-center space-x-32 bg-[#092948] p-3 sticky top-0 text-2xl w-full">
     <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="index.html">Startseite</a>
     <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="ueber_uns.html">Über uns</a>
     <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="kontakt.html">Kontakt</a>
     <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="leistungen.html">Leistung</a>
-    <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="verantsaltungen.html">Veranstaltungen</a>
+    <a class="p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="veranstaltungen.html">Veranstaltungen</a>
 </div>
-<footer class="bg-[#092948] text-gray-300">
+
+<!-- Mobile-Navigation (standardmäßig ausgeblendet) -->
+<div class="sm:hidden flex text-white justify-between items-center bg-[#092948] p-3 sticky top-0 text-2xl w-full">
+    <div class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="nav-links hidden">
+        <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="index.html">Startseite</a>
+        <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="ueber_uns.html">Über uns</a>
+        <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="kontakt.html">Kontakt</a>
+        <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="leistungen.html">Leistung</a>
+        <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="veranstaltungen.html">Veranstaltungen</a>
+    </div>
+</div>
+
+<!-- Skript zum Anzeigen und Ausblenden der mobilen Navigation -->
+<script>
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburgerIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('hidden');
+    });
+</script>
+<div class="flex flex-col items-center">
+    <img class="m-4" src="icons/phillip.png">
+    <p class="text-4xl font-bold text-center mt-6 mb-6" style="font-family: 'URW Gothic'">Willkommen bei Satelight!</p>
+    <p class="text-xl leading-normal text-center w-10/12 mb-6">Wir sind ein junges und dynamisches Unternehmen in der Veranstaltungstechnik.
+        Unsere Leidenschaft für technische Innovationen und kreative Ideen motiviert uns, unvergessliche Veranstaltungen für unsere Kunden zu gestalten.<br><br>
+        Unser Team besteht aus erfahrenen und professionellen Technikern, die über das notwendige Know-how verfügen, um Ihre Ideen in die Realität umzusetzen.
+        Wir arbeiten eng mit unseren Kunden zusammen, um deren individuellen Anforderungen und Wünsche zu verstehen und sie in unsere Arbeit zu integrieren.
+        Durch unsere maßgeschneiderten Lösungen können wir eine Vielzahl von Veranstaltungen wie Konzerte, Messen, Firmenveranstaltungen und
+        private Feiern unterstützen.<br><br>
+        Wir legen besonderen Wert auf Qualität und Kundenzufriedenheit. Deshalb verwenden wir ausschließlich hochwertige Technologie und
+        Materialien, um ein erstklassiges Ergebnis zu erzielen. Wir sind stolz darauf, ein verlässlicher Partner für unsere Kunden zu sein und
+        ihnen eine zuverlässige und effiziente Durchführung ihrer Veranstaltung zu gewährleisten.<br><br>
+        Wir freuen uns darauf, Sie kennenzulernen und gemeinsam Ihre nächste Veranstaltung zum Erfolg zu führen! Kontaktieren Sie uns noch heute für ein unverbindliches Angebot.</p>
+</div>
+    <footer class="bg-[#092948] text-gray-300">
     <div class="container mx-auto py-4">
-        <div class="flex justify-center items-center">
-            <p class="mr-4">Satelight Veranstaltungstechnik</p>
-            <p class="mr-4">Phillip Holdenried</p>
-            <p class="mr-4">Gaustraße 77</p>
-            <p class="mr-4">55294 Bodenheim</p>
+        <div class="flex justify-center items-center flex-col">
+            <p class="mb-2">Satelight Veranstaltungstechnik</p>
+            <p class="mb-2">Phillip Holdenried</p>
+            <p class="mb-2">Gaustraße 77</p>
+            <p class="mb-2">55294 Bodenheim</p>
         </div>
         <div class="text-center mt-4">
             <p>&copy; 2023 Satelight</p>
