@@ -27,12 +27,14 @@
             <span></span>
             <span></span>
         </div>
+        <div class="nav-links-wrapper">
         <div class="nav-links hidden">
             <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="index.html">Startseite</a>
             <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="ueber_uns.html">Über uns</a>
             <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="kontakt.html">Kontakt</a>
             <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="leistungen.html">Leistung</a>
             <a class="block p-3 rounded-full hover:bg-[#0098d8] hover:text-black" href="veranstaltungen.html">Veranstaltungen</a>
+        </div>
         </div>
     </div>
 
@@ -45,18 +47,18 @@
             navLinks.classList.toggle('hidden');
         });
     </script>
-    <div class="relative w-full mx-auto">
-        <div class="slideshow-container">
-            <img class="slide object-cover h-full w-full absolute inset-0 active" src="bild1.jpg" alt="Bild 1">
-            <img class="slide object-cover h-full w-full absolute inset-0" src="bild2.jpg" alt="Bild 2">
-            <img class="slide object-cover h-full w-full absolute inset-0" src="bild3.jpg" alt="Bild 3">
-            <img class="slide object-cover h-full w-full absolute inset-0" src="bild4.jpeg" alt="Bild 4">
+        <div class="relative w-full mx-auto">
+            <div class="slideshow-container">
+                <img class="slide object-cover h-full w-full absolute inset-0 active" src="bild1.jpg" alt="Bild 1">
+                <img class="slide object-cover h-full w-full absolute inset-0" src="bild2.jpg" alt="Bild 2">
+                <img class="slide object-cover h-full w-full absolute inset-0" src="bild3.jpg" alt="Bild 3">
+                <img class="slide object-cover h-full w-full absolute inset-0" src="bild4.jpeg" alt="Bild 4">
+            </div>
+            <!--<a class="prev absolute top-1/2 left-0 transform -translate-y-1/2 hover:text-gray-500 transition-colors duration-300 ease-in-out"
+               href="#"><span class="sr-only">Vorheriges Bild</span>&#10094;</a>
+            <a class="next absolute top-1/2 right-0 transform -translate-y-1/2 hover:text-gray-500 transition-colors duration-300 ease-in-out"
+               href="#"><span class="sr-only">Nächstes Bild</span>&#10095;</a>-->
         </div>
-        <a class="prev absolute top-1/2 left-0 transform -translate-y-1/2 hover:text-gray-500 transition-colors duration-300 ease-in-out"
-           href="#"><span class="sr-only">Vorheriges Bild</span>&#10094;</a>
-        <a class="next absolute top-1/2 right-0 transform -translate-y-1/2 hover:text-gray-500 transition-colors duration-300 ease-in-out"
-           href="#"><span class="sr-only">Nächstes Bild</span>&#10095;</a>
-    </div>
 
     <script>
         const slides = document.querySelectorAll('.slide');

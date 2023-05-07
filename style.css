@@ -1,6 +1,7 @@
 .hamburger-icon {
     display: block;
     cursor: pointer;
+    z-index: 9999;
 }
 
 .hamburger-icon span {
@@ -18,10 +19,15 @@
     left: 0;
     width: 100%;
     background-color: #092948;
+    z-index: 9999;
 }
 
 .nav-links a {
     display: block;
+}
+
+.nav-links-wrapper {
+    z-index: 999;
 }
 
 @media (min-width: 640px) {
@@ -36,21 +42,22 @@
     }
     .slideshow-container {
         height: 500px;
+        z-index: -1;
     }
 }
 @media (max-width: 640px) {
     .slideshow-container {
         height: 300px;
+        z-index: -3;
+    }
+    .nav-links-wrapper {
+        z-index: 9999;
     }
 }
 
-.nav-links {
-    z-index: 1;
-}
 .slideshow-container {
     position: relative;
     overflow: hidden;
-    z-index: -1;
 }
 
 .slide {
