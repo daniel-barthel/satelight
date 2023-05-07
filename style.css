@@ -34,14 +34,20 @@
     .nav-links a {
         display: inline-block;
     }
+    .slideshow-container {
+        height: 500px;
+    }
+}
+@media (max-width: 640px) {
+    .slideshow-container {
+        height: 300px;
+    }
 }
 
 .nav-links {
     z-index: 1;
 }
 .slideshow-container {
-    width: 100%;
-    height: 500px; /* anpassen nach Bedarf */
     position: relative;
     overflow: hidden;
     z-index: -1;
