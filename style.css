@@ -19,11 +19,12 @@
     left: 0;
     width: 100%;
     background-color: #092948;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .nav-links a {
     display: block;
+    z-index: 999;
 }
 
 .nav-links-wrapper {
@@ -36,6 +37,8 @@
     }
     .nav-links {
         flex-direction: row;
+        position: relative;
+        z-index: 999;
     }
     .nav-links a {
         display: inline-block;
@@ -91,4 +94,9 @@
     100% {
         opacity: 0;
     }
+}
+
+.grid .relative {
+    position: relative;
+    z-index: -1;
 }
